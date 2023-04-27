@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ToDoContainer } from "./components/toDoContainer/ToDoContainer";
 
-import { TaskContext } from "./utils/context";
+import { TaskContext } from "./config/context";
 import { Task } from "./types/task";
 
 function App() {

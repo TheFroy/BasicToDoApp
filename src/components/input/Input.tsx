@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import inputImg from "../../assets/edit.png";
 import { Icon, InputContainer, CustomInput } from "./Input.styles";
-import { TaskContext } from "../../utils/context";
+import { TaskContext } from "../../config/context";
 import { Task } from "../../types/task";
 
 export const Input = () => {

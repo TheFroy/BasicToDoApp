@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { NavContainer } from "./Navbar.styles";
 import { Button } from "../button/Button";
 import { filters } from "../../utils/filterEnums";
-import { TaskContext } from "../../utils/context";
+import { TaskContext } from "../../config/context";
 
 export const Navbar = ({ filter, setFilter }: any) => {
   const { setTaskList } = useContext(TaskContext);

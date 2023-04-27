@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Task } from "../task/Task";
 import { MainContainer } from "./TaskContainer.styles";
-import { TaskContext } from "../../utils/context";
+import { TaskContext } from "../../config/context";
 import { filters } from "../../utils/filterEnums";
 
 export const TaskContainer = ({ filter }: any) => {

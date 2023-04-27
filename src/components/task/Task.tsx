@@ -6,7 +6,7 @@ import unchecked from "../../assets/unchecked.png";
 import dots from "../../assets/dots.png";
 import { Popup } from "../popup/Popup";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
-import { TaskContext } from "../../utils/context";
+import { TaskContext } from "../../config/context";
 
 export const Task = ({ title, completed, id }: TaskType) => {
   const { taskList, setTaskList } = useContext(TaskContext);
@@ -15,7 +15,7 @@ export const Task = ({ title, completed, id }: TaskType) => {
 
   useOutsideClick(containerRef, setShowPopup);
 
-  const handleCmpleteTask = () => {
+  const handleCompleteTask = () => {
     const taskToComplete = taskList.map((task) => {
       if (task.id === id) {
         return { ...task, completed: task.completed ? false : true };
@@ -30,7 +30,7 @@ export const Task = ({ title, completed, id }: TaskType) => {
     <TaskContainer>
       <img
         src={completed ? checked : unchecked}
-        onClick={handleCmpleteTask}
+        onClick={handleCompleteTask}
         alt=""
       />
       <span style={{ textDecoration: completed ? "line-through" : "none" }}>
@@ -43,7 +43,7 @@ export const Task = ({ title, completed, id }: TaskType) => {
         onClick={() => setShowPopup(true)}
       >
         <img src={dots} alt="" />
-        {showPopup && <Popup />}
+        {showPopup && <Popup taskId={id} />}
       </div>
     </TaskContainer>
   );

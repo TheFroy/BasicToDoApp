@@ -5,7 +5,7 @@ import { TaskContext } from "../../utils/context";
 import { Task } from "../../types/task";
 
 export const Input = () => {
-  const { taskList, setTaskList } = useContext(TaskContext);
+  const { setTaskList } = useContext(TaskContext);
   const initialState = {
     id: parseInt((Math.random() * 1000).toFixed(3)),
     title: "",

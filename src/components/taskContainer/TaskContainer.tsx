@@ -10,7 +10,12 @@ export const TaskContainer = () => {
       {taskList?.length > 0 ? (
         <>
           {taskList.map((task) => (
-            <Task key={task.id} title={task.title} completed={task.completed} />
+            <Task
+              key={task.id}
+              title={task.title}
+              id={task.id}
+              completed={task.completed}
+            />
           ))}
         </>
       ) : (

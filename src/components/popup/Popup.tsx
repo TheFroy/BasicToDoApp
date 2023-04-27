@@ -6,10 +6,10 @@ export const Popup = () => {
   return (
     <PopupContainer>
       <PopupItem>
-        <img src={bin} alt="" /> Edit
+        <img src={bin} alt="" /> Delete
       </PopupItem>
       <PopupItem>
-        <img src={editpen} alt="" /> Delete
+        <img src={editpen} alt="" /> Edit
       </PopupItem>
     </PopupContainer>
   );

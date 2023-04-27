@@ -12,26 +12,41 @@ export const TaskContainer = ({ filter }: any) => {
         <>
           {taskList.map((task) => (
             <>
-              {filter !== filters.ALL && filter === filters.COMPLETED ? (
+              {filter === filters.ALL ? (
                 <>
-                  {task.completed && (
+                  {
                     <Task
                       key={task.id}
                       title={task.title}
                       id={task.id}
                       completed={task.completed}
                     />
-                  )}
+                  }
                 </>
               ) : (
                 <>
-                  {!task.completed && (
-                    <Task
-                      key={task.id}
-                      title={task.title}
-                      id={task.id}
-                      completed={task.completed}
-                    />
+                  {filter === filters.COMPLETED ? (
+                    <>
+                      {task.completed && (
+                        <Task
+                          key={task.id}
+                          title={task.title}
+                          id={task.id}
+                          completed={task.completed}
+                        />
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      {!task.completed && (
+                        <Task
+                          key={task.id}
+                          title={task.title}
+                          id={task.id}
+                          completed={task.completed}
+                        />
+                      )}
+                    </>
                   )}
                 </>
               )}

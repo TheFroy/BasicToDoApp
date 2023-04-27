@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { NavContainer } from "./Navbar.styles";
 import { Button } from "../button/Button";
 import { filters } from "../../utils/filterEnums";
+import { TaskContext } from "../../utils/context";
 
 export const Navbar = ({ filter, setFilter }: any) => {
+  const { setTaskList } = useContext(TaskContext);
   return (
     <NavContainer>
       <h3
@@ -23,7 +26,7 @@ export const Navbar = ({ filter, setFilter }: any) => {
       >
         Completed
       </h3>
-      <Button>Clear All</Button>
+      <Button onClick={() => setTaskList([])}>Clear All</Button>
     </NavContainer>
   );
 };

@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 
 export const TaskContainer = styled.div({
   display: "flex",
+  zIndex: "9",
+  position: "relative",
   gap: "15px",
   alignItems: "center",
   padding: "20px 10px",

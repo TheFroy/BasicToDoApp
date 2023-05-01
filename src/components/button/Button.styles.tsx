@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { Theme } from "../../types/theme";
 
-export const CustomButton = styled.button({
+export const CustomButton = styled.button(({ theme }: { theme: Theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -8,9 +9,9 @@ export const CustomButton = styled.button({
   color: "white",
   border: "none",
   outline: "none",
-  background: "linear-gradient(135deg, #f5af19, #f12711)",
+  background: theme.background,
   borderRadius: "8px",
   padding: "7px",
   fontFamily: "Lato, sans-serif !important",
   fontSize: "16px",
-});
+}));

@@ -39,7 +39,7 @@ export const Task = ({ title, completed, id }: TaskType) => {
 
       <div
         ref={containerRef}
-        style={{ position: "relative" }}
+        style={{ position: "relative", zIndex: 0 }}
         onClick={() => setShowPopup(true)}
       >
         <img src={dots} alt="" />

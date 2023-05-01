@@ -15,9 +15,11 @@ export const Icon = styled.img({
   paddingLeft: "15px",
 });
 
-export const CustomInput = styled.input({
+export const CustomInput = styled.input(({ theme }: any) => ({
   width: "100%",
   height: "40px",
+  backgroundColor: "transparent",
+  color: theme.text,
   paddingLeft: "45px",
   border: "1px solid #ccc",
   borderRadius: "4px",
@@ -29,6 +31,6 @@ export const CustomInput = styled.input({
   },
   "&:focus": {
     outline: "none",
-    border: "2px solid #f12711",
+    border: `2px solid ${theme.pallete.primary}`,
   },
-});
+}));

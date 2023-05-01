@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { Theme } from "../../types/theme";
 
-export const NavContainer = styled.div({
+export const NavContainer = styled.div(({ theme }: { theme: Theme }) => ({
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
@@ -13,6 +14,6 @@ export const NavContainer = styled.div({
     padding: "none",
   },
   "& .active": {
-    color: " #f12711",
+    color: theme.pallete?.primary,
   },
-});
+}));

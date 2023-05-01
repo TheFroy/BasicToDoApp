@@ -1,15 +1,16 @@
 import styled from "@emotion/styled";
+import { Theme } from "../../types/theme";
 
-export const PopupContainer = styled.div({
+export const PopupContainer = styled.div(({ theme }: { theme: Theme }) => ({
   position: "absolute",
   right: "0",
   top: "0",
-  backgroundColor: "white",
+  zIndex: "99",
+  backgroundColor: theme.background,
   boxShadow: "0 0 6px rgba(0, 0, 0, 0.15)",
   borderRadius: "6px",
   width: "max-content",
-  // padding: "5px 8px",
-});
+}));
 
 export const PopupItem = styled.div({
   cursor: "pointer",

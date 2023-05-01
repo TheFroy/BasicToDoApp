@@ -12,6 +12,7 @@ export const Input = () => {
     id: parseInt((Math.random() * 1000).toFixed(3)),
     title: "",
     completed: false,
+    editable: false,
   };
 
   const [newTask, setNewTask] = useState<Task>(initialState);

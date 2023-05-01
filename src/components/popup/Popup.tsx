@@ -18,9 +18,9 @@ export const Popup = ({ taskId }: any) => {
       <PopupItem onClick={handleDelete}>
         <img src={bin} alt="" /> Delete
       </PopupItem>
-      <PopupItem>
+      {/* <PopupItem>
         <img src={editpen} alt="" /> Edit
-      </PopupItem>
+      </PopupItem> */}
     </PopupContainer>
   );
 };

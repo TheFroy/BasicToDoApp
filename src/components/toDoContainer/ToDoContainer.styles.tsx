@@ -25,7 +25,7 @@ export const TopSection = styled.section(({ theme }: { theme: Theme }) => ({
 }));
 
 export const BottomSection = styled.section({
-  maxHeight: "400px",
+  maxHeight: "40vh",
   overflowY: "auto",
   paddingTop: "5px !important",
   "& :last-child": {

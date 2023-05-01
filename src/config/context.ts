@@ -11,7 +11,10 @@ type ContextType = {
 }
 export const TaskContext = createContext<ContextType>({
   taskList: [],
-  setTaskList: () => {}
+  setTaskList: () => { },
+  // addTask: (title: string, completed: boolean) => {},
+  // removeTask: (id: number) => {},
+  // updateTask: (id: number, title: string, completed: boolean) => {},
   // addTask: (title: string, completed: boolean) => {},
   // removeTask: (id: number) => {},
   // updateTask: (id: number, title: string, completed: boolean) => {},
